@@ -20,11 +20,13 @@ public class ListSepatuAdapter extends RecyclerView.Adapter<ListSepatuAdapter.Vi
 
     private ArrayList<Integer> fotoSepatu = new ArrayList<>();
     private ArrayList<String> namaSepatu = new ArrayList<>();
+    private ArrayList<String> detailSepatu = new ArrayList<>();
     private Context context;
 
-    public ListSepatuAdapter(ArrayList<Integer> fotoSepatu, ArrayList<String> namaSepatu, Context context) {
+    public ListSepatuAdapter(ArrayList<Integer> fotoSepatu, ArrayList<String> namaSepatu,ArrayList<String> detailSepatu, Context context) {
         this.fotoSepatu = fotoSepatu;
         this.namaSepatu = namaSepatu;
+        this.detailSepatu = detailSepatu;
         this.context = context;
     }
 
