@@ -1,11 +1,13 @@
 package org.aplas.miniproject1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -44,6 +46,21 @@ public class ListSepatuAdapter extends RecyclerView.Adapter<ListSepatuAdapter.Vi
         Glide.with(context).asBitmap().load(fotoSepatu.get(position)).into(holder.FotoSepatu);
 
         holder.NamaSepatu.setText(namaSepatu.get(position));
+
+        holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Overrideb
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, DetailActivity.class);
+
+                intent.putExtra("image", fotoSepatu.get(position));
+                intent.putExtra("name", namaSepatu.get(position));
+                intent.putExtra("info", detailSepatu.get(position));
+
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
