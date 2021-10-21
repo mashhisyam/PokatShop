@@ -1,5 +1,6 @@
 package org.aplas.miniproject1;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -20,15 +21,17 @@ import java.util.ArrayList;
 
 public class ListSepatuAdapter extends RecyclerView.Adapter<ListSepatuAdapter.ViewHolder>{
 
-    private ArrayList<Integer> fotoSepatu = new ArrayList<>();
+    private ArrayList<String> fotoSepatu = new ArrayList<>();
     private ArrayList<String> namaSepatu = new ArrayList<>();
     private ArrayList<String> detailSepatu = new ArrayList<>();
+    private ArrayList<String> warnaSepatu = new ArrayList<>();
     private Context context;
 
-    public ListSepatuAdapter(ArrayList<Integer> fotoSepatu, ArrayList<String> namaSepatu,ArrayList<String> detailSepatu, Context context) {
+        public ListSepatuAdapter(ArrayList<String> fotoSepatu, ArrayList<String> namaSepatu, ArrayList<String> detailSepatu, ArrayList<String> warnaSepatu, Context context) {
         this.fotoSepatu = fotoSepatu;
         this.namaSepatu = namaSepatu;
         this.detailSepatu = detailSepatu;
+        this.warnaSepatu = warnaSepatu;
         this.context = context;
     }
 
@@ -42,20 +45,20 @@ public class ListSepatuAdapter extends RecyclerView.Adapter<ListSepatuAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder,@SuppressLint("RecyclerView") int position) {
         Glide.with(context).asBitmap().load(fotoSepatu.get(position)).into(holder.FotoSepatu);
 
         holder.NamaSepatu.setText(namaSepatu.get(position));
 
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
-            @Overrideb
+            @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(context, DetailActivity.class);
 
-                intent.putExtra("image", fotoSepatu.get(position));
-                intent.putExtra("name", namaSepatu.get(position));
-                intent.putExtra("info", detailSepatu.get(position));
+                intent.putExtra("FotoSepatu", fotoSepatu.get(position));
+                intent.putExtra("NamaSepatu", namaSepatu.get(position));
+                intent.putExtra("DetailSepatu", detailSepatu.get(position));
+                intent.putExtra("WarnaSepatu", warnaSepatu.get(position));
 
                 context.startActivity(intent);
             }
