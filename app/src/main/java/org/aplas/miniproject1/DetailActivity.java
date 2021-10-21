@@ -10,8 +10,8 @@ import com.bumptech.glide.Glide;
 
 public class DetailActivity extends AppCompatActivity {
 
-    ImageView FotoSepatu;
-    TextView NamaSepatu, DetailSepatu;
+    ImageView FotoSepatuDetail;
+    TextView NamaSepatuDetail, Sepatudetail, WarnaSepatu;
 
 
     @Override
@@ -19,24 +19,27 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        NamaSepatu = findViewById(R.id.NamaSepatu);
-        DetailSepatu = findViewById(R.id.DetailSepatu);
-        FotoSepatu = findViewById(R.id.FotoSepatu);
+        NamaSepatuDetail = findViewById(R.id.NamaSepatuDetail);
+        Sepatudetail = findViewById(R.id.DetailSepatudetail);
+        FotoSepatuDetail = findViewById(R.id.FotoSepatuDetail);
+        WarnaSepatu = findViewById(R.id.WarnaSepatu);
 
         getIncomingExtra();
     }
     private void getIncomingExtra(){
-        if(getIntent().hasExtra("FotoSepatu") && getIntent().hasExtra("NamaSepatu")){
+        if(getIntent().hasExtra("FotoSepatu") && getIntent().hasExtra("DetailSepatu")){
             String fotoSepatu = getIntent().getStringExtra("FotoSepatu");
             String namaSepatu = getIntent().getStringExtra("NamaSepatu");
             String detailSepatu = getIntent().getStringExtra("DetailSepatu");
+            String warnaSepatu = getIntent().getStringExtra("WarnaSepatu");
 
-            setData(fotoSepatu, namaSepatu, detailSepatu);
+            setData(fotoSepatu, namaSepatu, detailSepatu, warnaSepatu);
         }
     }
-    private void setData(String fotoSepatu, String namaSepatu, String detailSepatu){
-        Glide.with(this).asBitmap().load(fotoSepatu).into(FotoSepatu);
-        NamaSepatu.setText(namaSepatu);
-        DetailSepatu.setText(detailSepatu);
+    private void setData(String fotoSepatu, String namaSepatu, String detailSepatu, String warnaSepatu){
+        Glide.with(this).asBitmap().load(fotoSepatu).into(FotoSepatuDetail);
+        NamaSepatuDetail.setText(namaSepatu);
+        Sepatudetail.setText(detailSepatu);
+        WarnaSepatu.setText(warnaSepatu);
     }
 }
