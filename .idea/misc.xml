@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/drawable/fotobasket.xml" value="0.2712820512820513" />
+        <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/drawable/ic_baseline_sports_basketball_24.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/drawable/iconapp_background.xml" value="0.15104166666666666" />
         <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/layout/activity_detail.xml" value="0.3425925925925926" />
         <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/layout/activity_list_monitor.xml" value="0.259375" />
         <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/layout/activity_list_sepatu.xml" value="0.176" />
@@ -12,6 +16,9 @@
         <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/layout/hari.xml" value="0.1453125" />
         <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/layout/list_sepatu_adapter.xml" value="0.264" />
         <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/layout/listjadwal.xml" value="0.2" />
+        <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/mipmap-anydpi-v26/iconapp.xml" value="0.2712820512820513" />
+        <entry key="..\:/Users/ironPC/AndroidStudioProjects/MiniProject1/app/src/main/res/mipmap-anydpi-v26/iconapp_round.xml" value="0.15104166666666666" />
       </map>
     </option>
   </component>
