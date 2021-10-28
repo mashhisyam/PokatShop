@@ -1,4 +1,4 @@
-# SOKAT SHOP
+# POKAT SHOP
 
 Nama  : Hisyam Haryo Mahdyan
 
